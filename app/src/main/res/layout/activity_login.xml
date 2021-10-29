@@ -47,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginVertical="5dp"
+                android:inputType="textEmailAddress"
                 android:background="@drawable/form_bg"
                 android:hint="Enter Your Email"
                 android:padding="15dp"
@@ -68,14 +69,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/btn_bg"
-                android:textStyle="bold"
-                android:textSize="25dp"
+                android:layout_marginHorizontal="65dp"
                 android:layout_marginVertical="10dp"
-               android:layout_marginHorizontal="65dp"
+                android:background="@drawable/btn_bg"
                 android:text="Login"
                 android:textAllCaps="false"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="25dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
 
