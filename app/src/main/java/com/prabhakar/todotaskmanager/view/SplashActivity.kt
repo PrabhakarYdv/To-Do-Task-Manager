@@ -1,10 +1,11 @@
-package com.prabhakar.todotaskmanager
+package com.prabhakar.todotaskmanager.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.prabhakar.todotaskmanager.R
 
 @Suppress("DEPRECATION")
 class SplashActivity : AppCompatActivity() {

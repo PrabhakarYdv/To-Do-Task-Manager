@@ -1,11 +1,12 @@
-package com.prabhakar.todotaskmanager
+package com.prabhakar.todotaskmanager.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.prabhakar.todotaskmanager.R
 
-class RegisterActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_login)
     }
 }
