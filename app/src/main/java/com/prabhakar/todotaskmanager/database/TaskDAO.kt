@@ -5,7 +5,7 @@ import androidx.room.*
 import com.prabhakar.todotaskmanager.database.model.TaskModel
 
 @Dao
-interface TaskDao {
+interface TaskDAO {
     @Query("select * from tasks")
     fun getAllTask(): LiveData<MutableList<TaskModel>>
 
@@ -19,5 +19,5 @@ interface TaskDao {
     fun deleteTask(taskModel: TaskModel)
 
     @Query("delete from tasks")
-    fun deleteTask()
+    fun deleteAllTask()
 }

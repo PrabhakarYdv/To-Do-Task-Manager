@@ -9,7 +9,7 @@ import com.prabhakar.todotaskmanager.database.model.TaskModel
 @Database(entities = [TaskModel::class], version = 1)
 abstract class TaskRoomDB : RoomDatabase() {
 
-    abstract fun getDAO(): TaskDao
+    abstract fun getDAO(): TaskDAO
 
     companion object {
         var instance: TaskRoomDB? = null

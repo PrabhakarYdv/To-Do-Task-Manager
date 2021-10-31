@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,19 +11,17 @@
         android:id="@+id/heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/header_bg"
+        android:gravity="center"
         android:orientation="horizontal"
         android:padding="10dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/user_icon" />
+
 
         <TextView
             android:id="@+id/user_name"
@@ -34,13 +33,25 @@
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
+
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@id/heading"
+        android:id="@+id/taskRecyclerView"
         android:layout_width="match_parent"
-        tools:listitem="@layout/task_layout"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="10dp" />
+        android:layout_below="@id/heading"
+        android:layout_marginHorizontal="10dp"
+        tools:listitem="@layout/task_layout" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/add_icon"
+        app:backgroundTint="#097AB1" />
 </RelativeLayout>

@@ -10,7 +10,7 @@ data class TaskModel(
     @ColumnInfo(name = "id") var id: Int,
     @ColumnInfo(name = "title") var title: String,
     @ColumnInfo(name = "desc") var desc: String,
-    @ColumnInfo(name = "desc") var date: String
+    @ColumnInfo(name = "date") var date: String
 
 ) {
 }

@@ -14,7 +14,8 @@ class TaskAdapter(private val taskLists:MutableList<TaskModel>): RecyclerView.Ad
     }
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val model=taskLists[position]
+        holder.setTaskData(model)
     }
 
     override fun getItemCount(): Int {

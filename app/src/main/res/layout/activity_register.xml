@@ -41,6 +41,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/registerUserName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
@@ -52,6 +53,7 @@
 
 
             <EditText
+                android:id="@+id/registerEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
@@ -62,6 +64,7 @@
                 android:textColor="#000000" />
 
             <EditText
+                android:id="@+id/registerPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
@@ -73,6 +76,7 @@
                 android:textColor="#000000" />
 
             <EditText
+                android:id="@+id/re_typePassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
@@ -84,6 +88,7 @@
                 android:textColor="#000000" />
 
             <Button
+                android:id="@+id/registerBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -94,6 +99,17 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="25dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/not_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:text="Already have an Account ? Login"
+                android:textColor="#BF0D4E"
+                android:textSize="15dp"
                 android:textStyle="bold" />
 
         </LinearLayout>

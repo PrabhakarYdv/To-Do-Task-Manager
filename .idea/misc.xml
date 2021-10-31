@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/drawable/add_iocn.xml" value="0.22870370370370371" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/drawable/btn_bg.xml" value="0.23148148148148148" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/drawable/custom_popup_bg.xml" value="0.23148148148148148" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/drawable/delete_icon.xml" value="0.22870370370370371" />
@@ -11,8 +12,10 @@
         <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/drawable/header_bg.xml" value="0.22870370370370371" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/drawable/read_icon.xml" value="0.22870370370370371" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/drawable/task_bg.xml" value="0.22870370370370371" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/layout/activity_add.xml" value="0.21216216216216216" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/layout/activity_edit.xml" value="0.22432432432432434" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/layout/activity_home.xml" value="0.259375" />
-        <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/layout/activity_login.xml" value="0.18611111111111112" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/layout/activity_main.xml" value="0.2453125" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/layout/activity_register.xml" value="0.16799999999999998" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Android Studio/To Do Task Manager/app/src/main/res/layout/activity_splash.xml" value="0.259375" />
