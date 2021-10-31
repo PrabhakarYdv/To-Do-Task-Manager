@@ -54,7 +54,5 @@ class RegisterActivity : AppCompatActivity() {
         } else {
             return true
         }
-
-
     }
 }
