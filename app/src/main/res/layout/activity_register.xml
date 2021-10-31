@@ -100,14 +100,15 @@
                 android:textColor="#FFFFFF"
                 android:textSize="25dp"
                 android:textStyle="bold" />
+
             <TextView
-                android:id="@+id/not_account"
+                android:id="@+id/already_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:clickable="true"
-                android:text="Already have an Account ? Login"
+                android:text="Don't have an Account ? Register"
                 android:textColor="#BF0D4E"
                 android:textSize="15dp"
                 android:textStyle="bold" />
