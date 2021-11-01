@@ -72,21 +72,21 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/btn_read"
+                android:id="@+id/btnComplete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:src="@drawable/read_icon" />
 
             <ImageView
-                android:id="@+id/btn_edit"
+                android:id="@+id/btnEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:src="@drawable/edit_icon" />
 
             <ImageView
-                android:id="@+id/btn_delete"
+                android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"

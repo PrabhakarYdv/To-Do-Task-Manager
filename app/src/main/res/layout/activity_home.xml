@@ -27,6 +27,7 @@
             android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
             android:layout_gravity="center"
             android:layout_marginLeft="5dp"
             android:text="Welcome Prabhakar"
@@ -35,6 +36,11 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/empty_task" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/taskRecyclerView"
@@ -42,6 +48,8 @@
         android:layout_height="match_parent"
         android:layout_below="@id/heading"
         android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#0000000"
         tools:listitem="@layout/task_layout" />
 
 

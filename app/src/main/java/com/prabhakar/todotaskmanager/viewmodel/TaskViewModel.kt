@@ -11,13 +11,14 @@ class TaskViewModel(private val repo: TaskRepo) : ViewModel() {
         return repo.getAllTask()
     }
 
-    fun addTask(taskModel: TaskModel){
+    fun addTask(taskModel: TaskModel) {
         repo.insertTask(taskModel)
     }
 
-    fun editTask(taskModel: TaskModel){
+    fun editTask(taskModel: TaskModel) {
         repo.updateTask(taskModel)
     }
+
     fun deleteTask(taskModel: TaskModel) {
         repo.deleteTask(taskModel)
     }
