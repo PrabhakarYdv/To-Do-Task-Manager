@@ -1,7 +1,9 @@
 package com.prabhakar.todotaskmanager.view
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -34,8 +36,16 @@ class HomeActivity : AppCompatActivity(), ClickListener {
         taskDAO = roomDB.getDAO()
         repo = TaskRepo(taskDAO)
         viewModelFactory = TaskViewModelFactory(repo)
-
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(TaskViewModel::class.java)
+
+
+        // Add Task
+
+        addBtn.setOnClickListener {
+            startActivity(Intent(this, AddActivity::class.java))
+        }
+
+
         buildList()
         setRecyclerView()
 
@@ -47,6 +57,7 @@ class HomeActivity : AppCompatActivity(), ClickListener {
             taskList.addAll(it)
             taskAdapter.notifyDataSetChanged()
         })
+
     }
 
 
@@ -61,10 +72,20 @@ class HomeActivity : AppCompatActivity(), ClickListener {
     }
 
     override fun onClickEdit(taskModel: TaskModel, position: Int) {
-        val intent = Intent(this, EditActivity(taskModel)::class.java)
+        val intent = Intent(this, EditActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onClickDelete(taskModel: TaskModel, position: Int) {
-        TODO("Not yet implemented")
+        viewModel.deleteTask(taskModel)
+    }
+
+    // Check list is empty or not
+    fun emptyListHandler() {
+        if (taskList.isNullOrEmpty()) {
+            taskRecyclerView.visibility = View.GONE
+            emptyTask.visibility = View.VISIBLE
+            homeActivity.setBackgroundColor(Color.WHITE)
+        }
     }
 }

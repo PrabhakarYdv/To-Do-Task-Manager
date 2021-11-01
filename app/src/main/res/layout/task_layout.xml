@@ -45,7 +45,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:background="#A34A4242"
                     android:layout_weight="1"
                     android:text="29-11-2021"
                     android:textColor="@color/white"
@@ -60,7 +59,7 @@
                 android:layout_gravity="center"
                 android:text="Sample test here "
                 android:textColor="#FFFFFF"
-                android:textSize="15dp" />
+                android:textSize="18dp" />
 
         </LinearLayout>
 
