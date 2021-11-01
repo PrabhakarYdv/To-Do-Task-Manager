@@ -38,7 +38,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/addTask_title"
+                android:id="@+id/editTask_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -49,7 +49,7 @@
                 android:textSize="15dp" />
 
             <EditText
-                android:id="@+id/addTask_desc"
+                android:id="@+id/editTask_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -60,7 +60,7 @@
                 android:textSize="15dp" />
 
             <TextView
-                android:id="@+id/addTask_date"
+                android:id="@+id/editTask_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -72,13 +72,13 @@
                 android:textSize="15dp" />
 
             <Button
-                android:id="@+id/saveBtn"
+                android:id="@+id/updateBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/btn_bg"
-                android:paddingHorizontal="50dp"
-                android:text="save"
+                android:paddingHorizontal="80dp"
+                android:text="Update"
                 android:textColor="#FFFFFF" />
 
         </LinearLayout>
