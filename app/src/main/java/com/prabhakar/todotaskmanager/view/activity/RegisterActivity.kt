@@ -1,4 +1,4 @@
-package com.prabhakar.todotaskmanager.view
+package com.prabhakar.todotaskmanager.view.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,21 +13,35 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-
         // ---------- REGISTER User --------------------
+
         registerBtn.setOnClickListener {
-            if (validationEmail() && validPassword()) {
-                startActivity(Intent(this, HomeActivity::class.java))
+            if (validName() && validationEmail() && validPassword()) {
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("userName", registerUserName.text.toString())
+                startActivity(intent)
             }
 
         }
 
         // Navigate to Login
+
         already_account.setOnClickListener {
+
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
 
+    }
+
+
+    private fun validName(): Boolean {
+        if (registerUserName.text != null && registerUserName.text.isNotEmpty() && registerUserName.text.toString().length >= 3) {
+            return true
+        } else {
+            registerUserName.error = "User Name should be minimum 3 Character !"
+            return false
+        }
     }
 
     private fun validationEmail(): Boolean {

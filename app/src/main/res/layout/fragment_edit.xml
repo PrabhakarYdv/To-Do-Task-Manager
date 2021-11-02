@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#E1CC6D"
     android:orientation="vertical"
-    tools:context=".view.AddActivity">
+    tools:context=".view.fragment.EditFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="100dp"
@@ -14,6 +14,7 @@
         android:layout_gravity="center"
         android:layout_margin="25dp"
         android:src="@drawable/logo" />
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -38,7 +39,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/addTask_title"
+                android:id="@+id/editTask_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -49,7 +50,7 @@
                 android:textSize="15dp" />
 
             <EditText
-                android:id="@+id/addTask_desc"
+                android:id="@+id/editTask_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -60,7 +61,7 @@
                 android:textSize="15dp" />
 
             <TextView
-                android:id="@+id/addTask_date"
+                android:id="@+id/editTask_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -72,13 +73,13 @@
                 android:textSize="15dp" />
 
             <Button
-                android:id="@+id/saveBtn"
+                android:id="@+id/updateBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/btn_bg"
                 android:paddingHorizontal="80dp"
-                android:text="Save"
+                android:text="Update"
                 android:textColor="#FFFFFF" />
 
         </LinearLayout>

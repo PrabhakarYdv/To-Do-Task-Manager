@@ -1,4 +1,4 @@
-package com.prabhakar.todotaskmanager.view
+package com.prabhakar.todotaskmanager.view.activity
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,6 +1,5 @@
-package com.prabhakar.todotaskmanager.view
+package com.prabhakar.todotaskmanager.view.activity
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -13,17 +12,22 @@ import com.prabhakar.todotaskmanager.database.TaskDAO
 import com.prabhakar.todotaskmanager.database.TaskRoomDB
 import com.prabhakar.todotaskmanager.database.model.TaskModel
 import com.prabhakar.todotaskmanager.database.repository.TaskRepo
+import com.prabhakar.todotaskmanager.view.ClickListener
 import com.prabhakar.todotaskmanager.view.adapter.TaskAdapter
+import com.prabhakar.todotaskmanager.view.fragment.AddFragment
+import com.prabhakar.todotaskmanager.view.fragment.EditFragment
 import com.prabhakar.todotaskmanager.viewmodel.TaskViewModel
 import com.prabhakar.todotaskmanager.viewmodel.TaskViewModelFactory
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity(), ClickListener {
+
+    private val fragmentManager = supportFragmentManager
     private lateinit var viewModel: TaskViewModel
-    lateinit var viewModelFactory: TaskViewModelFactory
+    private lateinit var viewModelFactory: TaskViewModelFactory
     private lateinit var repo: TaskRepo
     private lateinit var taskDAO: TaskDAO
-    lateinit var roomDB: TaskRoomDB
+    private lateinit var roomDB: TaskRoomDB
     private lateinit var taskAdapter: TaskAdapter
 
     private val taskList = mutableListOf<TaskModel>()
@@ -39,13 +43,20 @@ class HomeActivity : AppCompatActivity(), ClickListener {
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(TaskViewModel::class.java)
 
 
+        // Set user name
+        if (intent != null) {
+            user_name.text = "Welcome ${intent.getStringExtra("userName")}"
+        }
+
         // Add Task
 
         addBtn.setOnClickListener {
-            startActivity(Intent(this, AddActivity::class.java))
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.add(R.id.homeActivity, AddFragment()).addToBackStack("AddFragment")
+                .commit()
+
+            addBtn.visibility = View.GONE
         }
-
-
         buildList()
         setRecyclerView()
 
@@ -56,6 +67,7 @@ class HomeActivity : AppCompatActivity(), ClickListener {
             taskList.clear()
             taskList.addAll(it)
             taskAdapter.notifyDataSetChanged()
+            emptyListHandler()
         })
 
     }
@@ -72,20 +84,33 @@ class HomeActivity : AppCompatActivity(), ClickListener {
     }
 
     override fun onClickEdit(taskModel: TaskModel, position: Int) {
-        val intent = Intent(this, EditActivity::class.java)
-        startActivity(intent)
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.add(R.id.homeActivity, EditFragment(taskModel))
+            .addToBackStack("EditFragment").commit()
+        addBtn.visibility = View.GONE
     }
 
     override fun onClickDelete(taskModel: TaskModel, position: Int) {
         viewModel.deleteTask(taskModel)
     }
 
+
+
     // Check list is empty or not
-    fun emptyListHandler() {
+    private fun emptyListHandler() {
         if (taskList.isNullOrEmpty()) {
             taskRecyclerView.visibility = View.GONE
             emptyTask.visibility = View.VISIBLE
             homeActivity.setBackgroundColor(Color.WHITE)
+        } else {
+            taskRecyclerView.visibility = View.VISIBLE
+            emptyTask.visibility = View.GONE
+            homeActivity.setBackgroundResource(R.drawable.home_bg)
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        addBtn.visibility = View.VISIBLE
     }
 }
