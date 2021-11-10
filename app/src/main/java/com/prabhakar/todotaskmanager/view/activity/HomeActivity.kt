@@ -62,6 +62,7 @@ class HomeActivity : AppCompatActivity(), ClickListener {
 
     }
 
+
     private fun buildList() {
         viewModel.showAllTask().observe(this, Observer {
             taskList.clear()
