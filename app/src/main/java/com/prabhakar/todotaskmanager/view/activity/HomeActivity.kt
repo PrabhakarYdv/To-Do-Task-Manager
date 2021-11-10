@@ -47,8 +47,9 @@ class HomeActivity : AppCompatActivity(), ClickListener {
 
         if (intent != null) {
             user_name.text = "Welcome ${intent.getStringExtra("userName")}"
+        } else {
+            user_name.text = "Welcome"
         }
-
         // Add Task
 
         addBtn.setOnClickListener {
@@ -95,7 +96,6 @@ class HomeActivity : AppCompatActivity(), ClickListener {
     override fun onClickDelete(taskModel: TaskModel, position: Int) {
         viewModel.deleteTask(taskModel)
     }
-
 
 
     // Check list is empty or not
