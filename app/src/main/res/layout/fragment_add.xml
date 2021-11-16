@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#E1CC6D"
     android:orientation="vertical"
     tools:context=".view.fragment.AddFragment">
@@ -83,6 +83,7 @@
                 android:textColor="#FFFFFF" />
 
         </LinearLayout>
+
 
     </androidx.cardview.widget.CardView>
 
