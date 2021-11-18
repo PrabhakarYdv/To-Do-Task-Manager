@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.prabhakar.todotaskmanager">
+    package="com.prabhakar.todo">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".view.TaskApplication"
+        android:name="com.prabhakar.todo.view.TaskApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,19 +15,19 @@
         android:theme="@style/Theme.ToDoTaskManager"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".view.activity.HomeActivity"
+            android:name="com.prabhakar.todo.view.activity.HomeActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".view.activity.RegisterActivity"
+            android:name="com.prabhakar.todo.view.activity.RegisterActivity"
             android:exported="true"
             android:launchMode="singleInstance" />
         <activity
-            android:name=".view.activity.LoginActivity"
+            android:name="com.prabhakar.todo.view.activity.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".view.activity.SplashActivity"
+            android:name="com.prabhakar.todo.view.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
