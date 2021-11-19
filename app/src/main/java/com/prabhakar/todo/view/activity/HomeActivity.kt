@@ -46,7 +46,7 @@ class HomeActivity : AppCompatActivity(), ClickListener {
         // Set user name
 
         if (intent != null) {
-            user_name.text = "Welcome ${intent.getStringExtra("userName")}"
+            user_name.text = "Welcome ${intent?.getStringExtra("userName")}"
         } else {
             user_name.text = "Welcome"
         }
