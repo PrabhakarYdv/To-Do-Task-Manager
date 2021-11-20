@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_bg"
-    tools:context=".view.activity.HomeActivity">
+    tools:context="app.prabhakar.todotaskmanager.view.activity.HomeActivity">
 
     <LinearLayout
         android:id="@+id/heading"

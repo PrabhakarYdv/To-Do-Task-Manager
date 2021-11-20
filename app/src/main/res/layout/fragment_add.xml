@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E1CC6D"
     android:orientation="vertical"
-    tools:context=".view.fragment.AddFragment">
+    tools:context="app.prabhakar.todotaskmanager.view.fragment.AddFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="100dp"
