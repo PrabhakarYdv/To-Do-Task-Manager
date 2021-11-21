@@ -43,14 +43,14 @@ class HomeActivity : AppCompatActivity(), ClickListener {
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(TaskViewModel::class.java)
 
 
-        // Set user name
-
+//         Set user name
+//
 //        if (intent != null) {
 //            user_name.text = "Welcome ${intent.getStringExtra("userName")}"
 //        } else {
 //            user_name.text = "Welcome"
 //        }
-        // Add Task
+//         Add Task
 
         addBtn.setOnClickListener {
             val fragmentTransaction = fragmentManager.beginTransaction()
